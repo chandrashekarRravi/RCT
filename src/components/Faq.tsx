@@ -20,20 +20,20 @@ export function Faq() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-headline-lg text-on-surface">Questions? We&apos;ve Got Answers</h2>
+          <h2 className="font-headline-lg text-on-surface"> <span className="text-3xl text-on-surface pr-200">Questions?</span><br /><span className="text-8xl text-primary">We&apos;ve Got Answers</span></h2>
         </motion.div>
-        
+
         <div className="space-y-8">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="border-b border-on-surface/10 pb-8"
             >

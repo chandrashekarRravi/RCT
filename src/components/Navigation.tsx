@@ -2,11 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,14 +20,37 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // When the home page loads with a hash (e.g. navigating from /destinations → /#booking),
+  // Next.js doesn't auto-scroll to the anchor. This effect handles it.
+  useEffect(() => {
+    if (isHomePage && window.location.hash) {
+      const hash = window.location.hash;
+      const scrollToEl = () => {
+        const el = document.querySelector(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      };
+      // Small delay to let the page fully render before scrolling
+      const t = setTimeout(scrollToEl, 200);
+      return () => clearTimeout(t);
+    }
+  }, [isHomePage]);
+
   const navLinks = [
-    { name: "Destinations", href: "#destinations" },
-    { name: "Fleet", href: "#fleet" },
-    { name: "Airport", href: "#airport" },
-    { name: "About", href: "#about" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "FAQ", href: "#faq" },
-  ];
+    { name: "Destinations", hash: "#destinations" },
+    { name: "Fleet", hash: "#fleet" },
+    { name: "Airport", hash: "#airport" },
+    { name: "About", hash: "#about" },
+    { name: "Reviews", hash: "#reviews" },
+    { name: "FAQ", hash: "#faq" },
+  ].map((link) => ({
+    name: link.name,
+    href: isHomePage ? link.hash : `/${link.hash}`,
+  }));
+
+  const bookingHref = isHomePage ? "#booking" : "/#booking";
+
 
   return (
     <nav
@@ -34,11 +61,15 @@ export function Navigation() {
       }`}
     >
       <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
-        <Link
-          href="/"
-          className="font-headline-md text-headline-md font-bold text-primary tracking-tighter"
-        >
-          RED COASTAL
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.jpeg"
+            alt="Red Coastal Taxi Mangalore Logo"
+            width={160}
+            height={60}
+            className="object-contain h-12 w-auto mix-blend-multiply"
+            priority
+          />
         </Link>
         <div className="hidden lg:flex items-center space-x-8 font-label-caps text-label-caps">
           {navLinks.map((link) => (
@@ -53,7 +84,7 @@ export function Navigation() {
         </div>
         <div className="hidden lg:flex items-center space-x-4">
           <Link
-            href="#booking"
+            href={bookingHref}
             className="bg-on-surface text-surface-container-lowest px-6 py-3 font-label-caps text-label-caps hover:bg-primary transition-colors duration-300"
           >
             Book Now
@@ -91,7 +122,7 @@ export function Navigation() {
               ))}
               <div className="pt-4 mt-2 border-t border-on-surface/10">
                 <Link
-                  href="#booking"
+                  href={bookingHref}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="inline-block bg-on-surface text-surface-container-lowest px-6 py-3 text-center w-full hover:bg-primary transition-colors"
                 >

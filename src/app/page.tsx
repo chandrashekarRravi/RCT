@@ -17,10 +17,11 @@ export default function Home() {
       <Destinations limit={3} />
       <Fleet />
       <AirportTransfers />
-      <BookingForm />
-      <About />
       <Reviews />
+      <About />
+
       <Faq />
+      <BookingForm />
       <Footer />
     </main>
   );

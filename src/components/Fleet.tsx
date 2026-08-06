@@ -67,9 +67,9 @@ function FleetItem({ vehicle, index, activeIndex, setActiveIndex, onSelect }: { 
         <span className="font-label-caps text-xs text-secondary border border-secondary px-2 py-1 ml-2">{vehicle.category}</span>
       </div>
       <p className="font-body-md text-secondary mt-2">{vehicle.desc}</p>
-      
+
       {isActive && (
-        <button 
+        <button
           onClick={(e) => { e.stopPropagation(); onSelect(); }}
           className="mt-4 flex items-center text-primary font-label-caps text-sm hover:underline"
         >
@@ -101,14 +101,14 @@ export function Fleet() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.1, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-headline-lg text-headline-lg text-on-surface mb-16 border-b border-on-surface/10 pb-8">Our Luxury Fleet</h2>
+          <h2 className="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-16 border-b border-on-surface/10 pb-8">Our Luxury Fleet</h2>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter relative items-start">
-          
+
           <motion.div
             className="md:col-span-7 lg:col-span-8 relative min-h-[400px] md:min-h-[600px] md:sticky md:top-24 rounded-2xl overflow-hidden shadow-2xl"
           >
@@ -130,11 +130,11 @@ export function Fleet() {
               </motion.div>
             </AnimatePresence>
           </motion.div>
-          
+
           <div className="md:col-span-5 lg:col-span-4 flex flex-col justify-center bg-background p-8 md:p-12 min-h-[600px]">
             <AnimatePresence mode="wait">
               {selectedVehicle === null ? (
-                <motion.div 
+                <motion.div
                   key="list"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -143,18 +143,18 @@ export function Fleet() {
                 >
                   {fleet.map((vehicle, i) => (
                     <div key={i} className={`${i !== 0 ? 'border-t border-on-surface/10 pt-6 mt-6' : ''}`}>
-                      <FleetItem 
-                        vehicle={vehicle} 
-                        index={i} 
-                        activeIndex={activeIndex} 
-                        setActiveIndex={setActiveIndex} 
+                      <FleetItem
+                        vehicle={vehicle}
+                        index={i}
+                        activeIndex={activeIndex}
+                        setActiveIndex={setActiveIndex}
                         onSelect={() => handleSelect(i)}
                       />
                     </div>
                   ))}
                 </motion.div>
               ) : (
-                <motion.div 
+                <motion.div
                   key="details"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -184,11 +184,11 @@ export function Fleet() {
                       {fleet[selectedVehicle].category}
                     </span>
                   </div>
-                  
+
                   <p className="font-body-lg text-secondary mb-8 leading-relaxed">
                     {fleet[selectedVehicle].desc}
                   </p>
-                  
+
                   <div className="mt-auto">
                     <h4 className="font-headline-sm mb-4 border-b border-on-surface/10 pb-2 text-on-surface">Vehicle Features</h4>
                     <ul className="space-y-3 text-secondary font-body-md list-none">

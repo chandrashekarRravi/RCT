@@ -81,11 +81,11 @@ export function Destinations({ limit, hideViewAll }: { limit?: number, hideViewA
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: false, amount: 0.1, margin: "-100px" }}
         className="mb-16 md:mb-24 flex justify-between items-end border-b border-on-surface/10 pb-8"
       >
         <div>
-          <h2 className="font-headline-lg text-headline-lg text-on-surface">Explore Karnataka<br />&amp; Beyond</h2>
+          <h2 className="font-headline-lg text-headline-2xl md:text-headline-lg text-on-surface"><span className="text-7xl">Explore Karnataka</span><br />&amp;<span className="text-primary">Beyond</span> </h2>
           <p className="font-body-md text-secondary mt-4 max-w-lg">Handpicked routes for the ultimate road trip experience.</p>
         </div>
         {!hideViewAll && (

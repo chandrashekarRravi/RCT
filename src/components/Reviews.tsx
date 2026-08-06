@@ -19,20 +19,20 @@ export function Reviews() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.1 }}
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h2 className="font-headline-lg text-on-surface">Real Traveler Stories</h2>
+        <h2 className="font-headline-lg text-on-surface"><span className="text-4xl text-on-surface">Real</span><br /><span className="text-8xl text-primary">Traveler Stories</span></h2>
       </motion.div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
         {reviews.map((review, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             className="p-8 border border-on-surface/10 bg-surface-bright flex flex-col justify-between"
           >

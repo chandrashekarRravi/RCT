@@ -9,13 +9,13 @@ export function AirportTransfers() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="material-symbols-outlined text-5xl mb-6">flight_land</span>
-          <h2 className="font-headline-lg text-4xl md:text-5xl mb-6">Mangaluru Airport (IXE) Specialists</h2>
+          <span className="material-symbols-outlined text-6xl mb-6">flight_land</span>
+          <h2 className="font-headline-lg text-5xl md:text-7xl mb-6">Mangaluru Airport (IXE) Specialists</h2>
           <p className="font-body-lg text-on-primary/80 mb-10">
-            Never miss a flight. We offer 24/7 dedicated airport transfers with real-time flight tracking. 
+            Never miss a flight. We offer 24/7 dedicated airport transfers with real-time flight tracking.
             Our drivers wait for you at the arrival gate with name boards.
           </p>
           <a

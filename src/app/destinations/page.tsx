@@ -7,8 +7,8 @@ export default function DestinationsPage() {
   return (
     <main className="relative bg-background text-on-background">
       <Navigation />
-      
-      <div className="pt-32 pb-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+
+      <div className="pt-32  px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <nav className="flex text-sm text-secondary mb-8" aria-label="Breadcrumb">
           <ol className="inline-flex items-center space-x-1 md:space-x-3">
             <li className="inline-flex items-center">

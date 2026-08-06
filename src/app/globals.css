@@ -9,47 +9,48 @@
   --color-surface-container: #f0eee6;
   --color-surface-container-high: #eae8e0;
   --color-surface-container-highest: #e4e2db;
-  --color-on-surface: #141413;
-  --color-on-surface-variant: #57423f;
-  --color-inverse-surface: #30312c;
+  /* Brand Palette — Red Coastal Taxi Mangalore */
+  --color-on-surface: #0c203f;           /* main body text — deep navy */
+  --color-on-surface-variant: #092249;   /* secondary body text — navy */
+  --color-inverse-surface: #0c203f;
   --color-inverse-on-surface: #f3f1e9;
-  --color-outline: #8b716e;
-  --color-outline-variant: #dec0bb;
-  --color-surface-tint: #a6392f;
-  --color-primary: #8f2820;
+  --color-outline: #092249;
+  --color-outline-variant: #c0cde0;
+  --color-surface-tint: #c60808;
+  --color-primary: #c60808;              /* highlighted / CTA — vivid red */
   --color-on-primary: #ffffff;
-  --color-primary-container: #af4035;
+  --color-primary-container: #820a0a;    /* semi-bold accent — deep red */
   --color-on-primary-container: #ffdbd7;
   --color-inverse-primary: #ffb4aa;
-  --color-secondary: #5f5e5d;
+  --color-secondary: #092249;            /* secondary text — navy */
   --color-on-secondary: #ffffff;
-  --color-secondary-container: #e2dfdd;
-  --color-on-secondary-container: #636261;
-  --color-tertiary: #005757;
+  --color-secondary-container: #e2e8f0;
+  --color-on-secondary-container: #092249;
+  --color-tertiary: #0c203f;
   --color-on-tertiary: #ffffff;
-  --color-tertiary-container: #007171;
-  --color-on-tertiary-container: #9df2f1;
-  --color-error: #ba1a1a;
+  --color-tertiary-container: #1a3a6e;
+  --color-on-tertiary-container: #cdd8f0;
+  --color-error: #c60808;
   --color-on-error: #ffffff;
   --color-error-container: #ffdad6;
-  --color-on-error-container: #93000a;
+  --color-on-error-container: #820a0a;
   --color-primary-fixed: #ffdad5;
   --color-primary-fixed-dim: #ffb4aa;
-  --color-on-primary-fixed: #410001;
-  --color-on-primary-fixed-variant: #85221a;
-  --color-secondary-fixed: #e5e2e0;
-  --color-secondary-fixed-dim: #c9c6c4;
-  --color-on-secondary-fixed: #1c1c1a;
-  --color-on-secondary-fixed-variant: #474745;
-  --color-tertiary-fixed: #9cf1f0;
-  --color-tertiary-fixed-dim: #80d5d4;
-  --color-on-tertiary-fixed: #002020;
-  --color-on-tertiary-fixed-variant: #004f4f;
+  --color-on-primary-fixed: #820a0a;
+  --color-on-primary-fixed-variant: #820a0a;
+  --color-secondary-fixed: #e2e8f0;
+  --color-secondary-fixed-dim: #c0cde0;
+  --color-on-secondary-fixed: #0c203f;
+  --color-on-secondary-fixed-variant: #092249;
+  --color-tertiary-fixed: #cdd8f0;
+  --color-tertiary-fixed-dim: #99b0d8;
+  --color-on-tertiary-fixed: #0c203f;
+  --color-on-tertiary-fixed-variant: #092249;
   --color-background: #fbf9f1;
-  --color-on-background: #1b1c17;
+  --color-on-background: #0c203f;        /* page-level text — deep navy */
   --color-surface-variant: #e4e2db;
   --color-surface-alt: #E2D6C5;
-  --color-primary-muted: #D97757;
+  --color-primary-muted: #820a0a;        /* semi-bold red */
 
   --font-body-lg: "Inter", sans-serif;
   --font-label-caps: "Inter", sans-serif;
