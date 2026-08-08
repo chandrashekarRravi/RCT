@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Libre_Caslon_Text } from "next/font/google";
 import "./globals.css";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -50,6 +51,7 @@ export default function RootLayout({
         className={`${inter.variable} ${libreCaslon.variable} antialiased font-body-md overflow-x-hidden bg-background text-on-background`}
       >
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

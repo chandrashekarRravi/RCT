@@ -23,7 +23,7 @@ export function Reviews() {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h2 className="font-headline-lg text-on-surface"><span className="text-4xl text-on-surface">Real</span><br /><span className="text-8xl text-primary">Traveler Stories</span></h2>
+        <h2 className="font-headline-lg text-on-surface"><span className="text-3xl md:text-4xl text-on-surface">Real</span><br /><span className="text-5xl md:text-8xl text-primary">Traveler Stories</span></h2>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">

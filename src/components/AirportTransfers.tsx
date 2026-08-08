@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function AirportTransfers() {
   return (
-    <section id="airport" className="py-24 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary max-w-full text-center">
+    <section id="airport" className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary max-w-full text-center">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -24,7 +24,7 @@ export function Faq() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-headline-lg text-on-surface"> <span className="text-3xl text-on-surface pr-200">Questions?</span><br /><span className="text-8xl text-primary">We&apos;ve Got Answers</span></h2>
+          <h2 className="font-headline-lg text-on-surface"> <span className="text-3xl md:text-5xl text-on-surface pr-0 md:pr-40">Questions?</span><br /><span className="text-5xl md:text-8xl text-primary">We&apos;ve Got Answers</span></h2>
         </motion.div>
 
         <div className="space-y-8">

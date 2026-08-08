@@ -38,16 +38,14 @@ export function Navigation() {
   }, [isHomePage]);
 
   const navLinks = [
-    { name: "Destinations", hash: "#destinations" },
-    { name: "Fleet", hash: "#fleet" },
-    { name: "Airport", hash: "#airport" },
-    { name: "About", hash: "#about" },
-    { name: "Reviews", hash: "#reviews" },
-    { name: "FAQ", hash: "#faq" },
-  ].map((link) => ({
-    name: link.name,
-    href: isHomePage ? link.hash : `/${link.hash}`,
-  }));
+    { name: "Destinations", href: isHomePage ? "#destinations" : "/#destinations" },
+    { name: "Fleet", href: isHomePage ? "#fleet" : "/#fleet" },
+    { name: "Airport", href: isHomePage ? "#airport" : "/#airport" },
+    { name: "About", href: isHomePage ? "#about" : "/#about" },
+    { name: "Reviews", href: isHomePage ? "#reviews" : "/#reviews" },
+    { name: "FAQ", href: isHomePage ? "#faq" : "/#faq" },
+    { name: "Gallery", href: "/gallery" },
+  ];
 
   const bookingHref = isHomePage ? "#booking" : "/#booking";
 

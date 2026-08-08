@@ -5,10 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+let introPlayed = false;
+
 export function Hero() {
-  const [isIntro, setIsIntro] = useState(true);
+  const [isIntro, setIsIntro] = useState(!introPlayed);
 
   useEffect(() => {
+    if (introPlayed) {
+      setIsIntro(false);
+      return;
+    }
+
     if (isIntro) {
       document.body.style.overflow = "hidden";
       window.scrollTo(0, 0);
@@ -18,6 +25,7 @@ export function Hero() {
 
     const timer = setTimeout(() => {
       setIsIntro(false);
+      introPlayed = true;
     }, 3000);
 
     return () => {
@@ -80,7 +88,7 @@ export function Hero() {
             className="md:col-span-5 flex flex-col justify-center pr-0 md:pr-12 z-10 relative"
           >
             <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[95px] leading-tight text-on-surface mb-6 relative tracking-wider">
-              Beyond <br /> <span className="  text-8xl text-primary font-light">Regular</span>
+              Beyond <br /> <span className="text-6xl md:text-8xl text-primary font-light">Regular</span>
               <br />
               Travel
             </h1>
