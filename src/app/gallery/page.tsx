@@ -6,62 +6,43 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+// Mixed order — destinations & fleet interleaved, no category grouping
 const galleryImages = [
-  {
-    src: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800",
-    alt: "Premium SUV exterior",
-    span: "col-span-1 md:col-span-2 row-span-1 md:row-span-2",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=800",
-    alt: "Western Ghats scenery",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1596395819057-e37f55a8516b?auto=format&fit=crop&q=80&w=800",
-    alt: "Luxury car interior",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src: "/Fleet/crysta.png",
-    alt: "Toyota Innova Crysta",
-    span: "col-span-1 md:col-span-2 row-span-1 bg-surface-container object-contain p-8",
-  },
-  {
-    src: "/Fleet/marutisuzuki.png",
-    alt: "Executive sedan",
-    span: "col-span-1 row-span-2",
-  },
-  {
-    src: "/Fleet/traveller.png",
-    alt: "Coastal highway",
-    span: "col-span-1 md:col-span-2 row-span-2",
-  },
-  {
-    src: "/Fleet/Ertiga.png",
-    alt: "Maruti Suzuki Ertiga",
-    span: "col-span-1 row-span-1 bg-surface-container object-contain p-6",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=800",
-    alt: "Beach sunset",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src: "/Fleet/urbania.png",
-    alt: "Force Urbania",
-    span: "col-span-1 md:col-span-2 row-span-1 bg-surface-container object-contain p-8",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800",
-    alt: "Mountain retreat",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800",
-    alt: "City drive",
-    span: "col-span-1 row-span-1",
-  }
+  { src: "/Gallery/The%20Goa%20Circuit1.jpg",       alt: "The Goa Circuit",        fleet: false },
+  { src: "/Fleet/crysta.png",                        alt: "Toyota Innova Crysta",   fleet: true  },
+  { src: "/Gallery/Hampi%20Ruins1.jpg",             alt: "Hampi Ruins",            fleet: false },
+  { src: "/Gallery/Mysore%20Palace1.jpg",           alt: "Mysore Palace",          fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka.jpg",     alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/Coorg%20Coffee%20Trails1.jpg",   alt: "Coorg Coffee Trails",    fleet: false },
+  { src: "/Gallery/Hampi%20Ruins2.jpg",             alt: "Hampi Ruins",            fleet: false },
+  { src: "/Fleet/marutisuzuki.png",                 alt: "Maruti Suzuki",          fleet: true  },
+  { src: "/Gallery/The%20Goa%20Circuit2.jpg",       alt: "The Goa Circuit",        fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka1.jpg",    alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/Coorg%20Coffee%20Trails2.jpg",   alt: "Coorg Coffee Trails",    fleet: false },
+  { src: "/Gallery/Mysore%20Palace2.jpg",           alt: "Mysore Palace",          fleet: false },
+  { src: "/Gallery/Hampi%20Ruins3.jpg",             alt: "Hampi Ruins",            fleet: false },
+  { src: "/Fleet/traveller.png",                    alt: "Force Traveller",        fleet: true  },
+  { src: "/Gallery/The%20Goa%20Circuit3.jpg",       alt: "The Goa Circuit",        fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka2.jpg",    alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/Coorg%20Coffee%20Trails3.jpg",   alt: "Coorg Coffee Trails",    fleet: false },
+  { src: "/Gallery/Hampi%20Ruins4.jpg",             alt: "Hampi Ruins",            fleet: false },
+  { src: "/Gallery/Mysore%20Palace3.jpg",           alt: "Mysore Palace",          fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka3.jpg",    alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/The%20Goa%20Circuit4.jpg",       alt: "The Goa Circuit",        fleet: false },
+  { src: "/Fleet/Ertiga.png",                       alt: "Maruti Suzuki Ertiga",   fleet: true  },
+  { src: "/Gallery/Hampi%20Ruins5.jpg",             alt: "Hampi Ruins",            fleet: false },
+  { src: "/Gallery/Coorg%20Coffee%20Trails4.jpg",   alt: "Coorg Coffee Trails",    fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka4.jpg",    alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/Mysore%20Palace4.jpg",           alt: "Mysore Palace",          fleet: false },
+  { src: "/Gallery/The%20Goa%20Circuit5.jpg",       alt: "The Goa Circuit",        fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka5.jpg",    alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/Hampi%20Ruins6.jpg",             alt: "Hampi Ruins",            fleet: false },
+  { src: "/Gallery/Coorg%20Coffee%20Trails5.jpg",   alt: "Coorg Coffee Trails",    fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka6.jpg",    alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka7.jpg",    alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka8.jpg",    alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka9.jpg",    alt: "All over Karnataka",     fleet: false },
+  { src: "/Gallery/All%20over%20Karnataka10.jpg",   alt: "All over Karnataka",     fleet: false },
 ];
 
 export default function GalleryPage() {
@@ -98,23 +79,28 @@ export default function GalleryPage() {
           </p>
         </motion.div>
 
-        {/* Bento Grid Gallery */}
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[300px] gap-4 grid-flow-dense">
+        {/* Masonry layout — images show at natural proportions, no cropping */}
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4">
           {galleryImages.map((image, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "50px" }}
-              transition={{ duration: 0.5, delay: i * 0.05 }}
-              className={`relative overflow-hidden group rounded-xl ${image.span}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "30px" }}
+              transition={{ duration: 0.5, delay: i * 0.03 }}
+              className={`break-inside-avoid mb-3 md:mb-4 overflow-hidden rounded-xl group relative ${
+                image.fleet ? "bg-surface-container" : ""
+              }`}
             >
-              <div className="absolute inset-0 bg-on-surface/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+              <div className="absolute inset-0 bg-on-surface/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-xl" />
               <Image
                 src={image.src}
                 alt={image.alt}
-                fill
-                className={`transition-transform duration-700 group-hover:scale-105 ${image.span.includes('object-contain') ? 'object-contain' : 'object-cover'}`}
+                width={800}
+                height={600}
+                className={`w-full h-auto transition-transform duration-700 group-hover:scale-105 block ${
+                  image.fleet ? "object-contain p-4" : "object-cover"
+                }`}
               />
             </motion.div>
           ))}

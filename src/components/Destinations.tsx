@@ -9,64 +9,66 @@ const destinations = [
     title: "The Goa Circuit",
     desc: "Coastal drive through Karwar and Gokarna into the heart of Goa.",
     badge: "Best Seller",
-    img: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/The%20Goa%20Circuit.jpg",
   },
   {
     title: "Mysore Palace",
     desc: "Experience the royal heritage, Chamundi Hills, and the vibrant Devaraja Market.",
-    img: "https://images.unsplash.com/photo-1600100397608-f010f419b9ea?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/Mysore%20Palace.jpg",
   },
   {
     title: "Hampi Ruins",
     desc: "A UNESCO World Heritage site featuring the majestic Virupaksha Temple and stone chariot.",
-    img: "https://images.unsplash.com/photo-1620766182966-c6eb5ed2b788?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/Hampi%20Ruins.jpg",
   },
   {
     title: "Kukke Subramanya",
     desc: "The famous pilgrimage destination nestled in the lush green Western Ghats.",
-    img: "https://images.unsplash.com/photo-1596484552834-6a58f84bfc89?q=80&w=800&auto=format&fit=crop", // placeholder green
+    img: "/Destinations/Kukke%20Subramanya.jpg",
   },
   {
     title: "Malpe",
     desc: "Located just 7 kilometers from Udupi, Malpe Beach is a serene coastal retreat that combines natural beauty, thrilling adventures, and a touch of history.",
-    img: "https://images.unsplash.com/photo-1590076215667-873523522f25?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/Malpe.jpg",
   },
   {
     title: "Murudeshwara",
     desc: "Contains the world's third tallest Shiva statue, as well as the Murudeshwara Temple lying on the coast of the Arabian Sea.",
-    img: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/Murudeshwara.jpg",
   },
   {
     title: "Chikmagalur Peaks",
     desc: "High-altitude tea estates and the famous Mullayanagiri peak trek.",
-    img: "https://images.unsplash.com/photo-1626244464197-e89791471676?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/Chikmagalur%20Peaks.jpg",
   },
   {
     title: "Coorg Coffee Trails",
     desc: "Visit Madikeri, Dubare Elephant Camp, and Namdroling Monastery.",
-    img: "https://images.unsplash.com/photo-1595180453303-37604f3780e9?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/Coorg%20Coffee%20Trails.jpg",
   },
   {
     title: "Udupi",
     desc: "Explore the Sri Krishna Temple, St. Mary's Island, and beautiful beach sunsets.",
-    img: "https://images.unsplash.com/photo-1621648083812-4fb8e8eef051?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/Udupi.jpg",
   },
   {
     title: "Dharmasthala",
     desc: "A renowned temple town with deep cultural and spiritual significance along the Netravati river.",
-    img: "https://images.unsplash.com/photo-1601618218155-21d701ec6a98?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/Dharmasthala.webp",
   },
   {
     title: "Kateel, Mangalore",
     desc: "The holiest temple town on the banks of river Nandini. A peaceful spiritual getaway.",
-    img: "https://images.unsplash.com/photo-1582510003544-4d00b7f7415e?q=80&w=800&auto=format&fit=crop",
+    img: "/Destinations/Kateel%2C%20Mangalore.jpg",
   },
   {
     title: "All over Karnataka",
     desc: "Tourist places in Karnataka spell allure and sedation. Some of these best places are well-renowned, while the others are left unappreciated.",
-    img: "https://images.unsplash.com/photo-1534346765103-6258edfa39dc?q=80&w=800&auto=format&fit=crop",
-  }
+    img: "/Destinations/All%20over%20Karnataka.webp",
+  },
 ];
+
+
 
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },

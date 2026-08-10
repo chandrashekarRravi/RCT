@@ -139,7 +139,7 @@ export function Fleet() {
                   src={fleet[displayIndex].img}
                   alt={fleet[displayIndex].name}
                   fill
-                  className="object-contain p-8 drop-shadow-2xl"
+                  className="object-cover"
                 />
               </motion.div>
             </AnimatePresence>
@@ -272,8 +272,8 @@ export function Fleet() {
                 <div className="w-12 h-1.5 bg-on-surface/20 rounded-full" />
               </div>
               <div className="px-6 pb-8">
-                <div className="relative h-48 w-full mb-6 bg-surface-container rounded-2xl overflow-hidden p-4">
-                  <Image src={fleet[selectedMobileVehicle].img} alt={fleet[selectedMobileVehicle].name} fill className="object-contain drop-shadow-xl" />
+                <div className="relative h-48 w-full mb-6 bg-surface-container rounded-2xl overflow-hidden">
+                  <Image src={fleet[selectedMobileVehicle].img} alt={fleet[selectedMobileVehicle].name} fill className="object-cover" />
                 </div>
                 
                 <div className="flex justify-between items-start mb-4">
