@@ -31,6 +31,7 @@ export function Footer() {
           <div className="flex items-center space-x-4 mb-4">
             <span className="material-symbols-outlined text-secondary">call</span>
             <span className="font-body-md text-secondary">99720 02436</span>
+            <span className="font-body-md text-secondary">63630 35567</span>
           </div>
           <div className="flex items-start space-x-4 mb-4">
             <span className="material-symbols-outlined text-secondary mt-1">location_on</span>
@@ -53,17 +54,17 @@ export function Footer() {
               <li>
                 <Link href="https://instagram.com/rct_mangalore" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                   </svg>
                 </Link>
               </li>
               <li>
                 <Link href="https://wa.me/919972002436" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
-                    <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>
+                    <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                    <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
                   </svg>
                 </Link>
               </li>

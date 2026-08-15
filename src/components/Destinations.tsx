@@ -6,9 +6,26 @@ import Link from "next/link";
 
 const destinations = [
   {
+    title: "Kateel, Mangalore",
+    desc: "The holiest temple town on the banks of river Nandini. A peaceful spiritual getaway.",
+    img: "/Destinations/Kateel%2C%20Mangalore.jpg",
+    badge: "Spiritual Getaway",
+  },
+  {
+    title: "Dharmasthala",
+    desc: "A renowned temple town with deep cultural and spiritual significance along the Netravati river.",
+    img: "/Destinations/Dharmasthala.webp",
+    badge: "Spiritual Getaway",
+  }, {
+    title: "Murudeshwara",
+    desc: "Contains the world's third tallest Shiva statue, as well as the Murudeshwara Temple lying on the coast of the Arabian Sea.",
+    img: "/Destinations/Murudeshwara.jpg",
+    badge: "Spiritual Getaway",
+  },
+  {
     title: "The Goa Circuit",
     desc: "Coastal drive through Karwar and Gokarna into the heart of Goa.",
-    badge: "Best Seller",
+
     img: "/Destinations/The%20Goa%20Circuit.jpg",
   },
   {
@@ -31,11 +48,7 @@ const destinations = [
     desc: "Located just 7 kilometers from Udupi, Malpe Beach is a serene coastal retreat that combines natural beauty, thrilling adventures, and a touch of history.",
     img: "/Destinations/Malpe.jpg",
   },
-  {
-    title: "Murudeshwara",
-    desc: "Contains the world's third tallest Shiva statue, as well as the Murudeshwara Temple lying on the coast of the Arabian Sea.",
-    img: "/Destinations/Murudeshwara.jpg",
-  },
+
   {
     title: "Chikmagalur Peaks",
     desc: "High-altitude tea estates and the famous Mullayanagiri peak trek.",
@@ -50,16 +63,6 @@ const destinations = [
     title: "Udupi",
     desc: "Explore the Sri Krishna Temple, St. Mary's Island, and beautiful beach sunsets.",
     img: "/Destinations/Udupi.jpg",
-  },
-  {
-    title: "Dharmasthala",
-    desc: "A renowned temple town with deep cultural and spiritual significance along the Netravati river.",
-    img: "/Destinations/Dharmasthala.webp",
-  },
-  {
-    title: "Kateel, Mangalore",
-    desc: "The holiest temple town on the banks of river Nandini. A peaceful spiritual getaway.",
-    img: "/Destinations/Kateel%2C%20Mangalore.jpg",
   },
   {
     title: "All over Karnataka",
