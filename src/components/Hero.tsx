@@ -171,10 +171,10 @@ export function Hero() {
             {!showIntro && (
               <motion.div
                 className="absolute inset-0 w-full h-full"
-                // First load → clip reveal top→bottom
+                // First load → scale reveal top→bottom (GPU composited, no CLS)
                 // Breadcrumb nav → initial=false renders at final state instantly, no transition
-                initial={isFirstLoad.current ? { clipPath: "inset(0% 0% 100% 0%)" } : false}
-                animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
+                initial={isFirstLoad.current ? { scaleY: 0, transformOrigin: "top" } : false}
+                animate={{ scaleY: 1, transformOrigin: "top" }}
                 transition={isFirstLoad.current ? { duration: 1.5, ease: ease, delay: 0.35 } : { duration: 0 }}
               >
                 <video

@@ -85,7 +85,9 @@ function FleetItem({ vehicle, index, activeIndex, setActiveIndex, onSelect }: { 
           onClick={(e) => { e.stopPropagation(); onSelect(); }}
           className="mt-4 flex items-center text-primary font-label-caps text-sm hover:underline"
         >
-          View Info <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+          View Info <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5  mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
         </button>
       )}
     </div>
@@ -146,7 +148,7 @@ export function Fleet() {
           </motion.div>
 
           <div className="md:col-span-5 lg:col-span-4 flex flex-col justify-center bg-background md:p-12 min-h-[auto] md:min-h-[600px] rounded-2xl md:rounded-none overflow-hidden">
-            
+
             {/* Desktop View */}
             <div className="hidden md:block h-full">
               <AnimatePresence mode="wait">
@@ -188,7 +190,7 @@ export function Fleet() {
                         </li>
                         <li>
                           <div className="flex items-center">
-                            <span className="material-symbols-outlined mx-1 text-sm">chevron_right</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                             <span className="text-on-surface font-medium truncate max-w-[150px]">{fleet[selectedVehicle].name}</span>
                           </div>
                         </li>
@@ -209,10 +211,20 @@ export function Fleet() {
                     <div className="mt-auto">
                       <h4 className="font-headline-sm mb-4 border-b border-on-surface/10 pb-2 text-on-surface">Vehicle Features</h4>
                       <ul className="space-y-3 text-secondary font-body-md list-none">
-                        <li className="flex items-center"><span className="material-symbols-outlined mr-2 text-primary">check_circle</span> Premium Leather Seating</li>
-                        <li className="flex items-center"><span className="material-symbols-outlined mr-2 text-primary">check_circle</span> Advanced Climate Control</li>
-                        <li className="flex items-center"><span className="material-symbols-outlined mr-2 text-primary">check_circle</span> Spacious Luggage Capacity</li>
-                        <li className="flex items-center"><span className="material-symbols-outlined mr-2 text-primary">check_circle</span> Professional Chauffeur</li>
+                        {[
+                          "Premium Leather Seating",
+                          "Advanced Climate Control",
+                          "Spacious Luggage Capacity",
+                          "Professional Chauffeur",
+                        ].map((feat) => (
+                          <li key={feat} className="flex items-center">
+                            {/* check icon */}
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-2 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            {feat}
+                          </li>
+                        ))}
                       </ul>
 
                       <Link href="#booking" className="mt-10 block text-center bg-on-surface text-surface-container-lowest px-6 py-4 font-label-caps hover:bg-primary transition-colors">
@@ -229,8 +241,8 @@ export function Fleet() {
               <p className="font-label-caps text-sm text-secondary mb-6 uppercase tracking-wider">Select a vehicle for details</p>
               <div className="space-y-2">
                 {fleet.map((vehicle, i) => (
-                  <div 
-                    key={i} 
+                  <div
+                    key={i}
                     className="flex justify-between items-center py-4 border-b border-on-surface/5 cursor-pointer active:bg-on-surface/5 transition-colors rounded-lg px-2 -mx-2"
                     onClick={() => setSelectedMobileVehicle(i)}
                   >
@@ -239,7 +251,10 @@ export function Fleet() {
                       <span className="font-label-caps text-[10px] text-secondary border border-secondary/30 px-2 py-0.5 rounded-sm">{vehicle.category}</span>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0">
-                      <span className="material-symbols-outlined text-primary text-sm">arrow_forward_ios</span>
+                      {/* chevron right */}
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M9 5l7 7-7 7" />
+                      </svg>
                     </div>
                   </div>
                 ))}
@@ -254,14 +269,14 @@ export function Fleet() {
       <AnimatePresence>
         {selectedMobileVehicle !== null && (
           <div className="md:hidden">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/60 z-[100] backdrop-blur-sm"
               onClick={() => setSelectedMobileVehicle(null)}
             />
-            <motion.div 
+            <motion.div
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
@@ -275,28 +290,48 @@ export function Fleet() {
                 <div className="relative h-48 w-full mb-6 bg-surface-container rounded-2xl overflow-hidden">
                   <Image src={fleet[selectedMobileVehicle].img} alt={fleet[selectedMobileVehicle].name} fill className="object-cover" />
                 </div>
-                
+
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-headline-md text-on-surface leading-tight pr-4">{fleet[selectedMobileVehicle].name}</h3>
                   <span className="font-label-caps text-[10px] border border-primary text-primary px-2 py-1 rounded whitespace-nowrap shrink-0 mt-1">
                     {fleet[selectedMobileVehicle].category}
                   </span>
                 </div>
-                
+
                 <p className="font-body-md text-secondary mb-8 leading-relaxed">
                   {fleet[selectedMobileVehicle].desc}
                 </p>
-                
+
                 <h4 className="font-headline-sm mb-3 border-b border-on-surface/10 pb-2 text-on-surface text-sm">Key Features</h4>
                 <ul className="space-y-3 text-secondary font-body-sm list-none mb-8">
-                  <li className="flex items-center"><span className="material-symbols-outlined mr-3 text-primary text-base">airline_seat_recline_extra</span> Premium Seating</li>
-                  <li className="flex items-center"><span className="material-symbols-outlined mr-3 text-primary text-base">ac_unit</span> Advanced Climate Control</li>
-                  <li className="flex items-center"><span className="material-symbols-outlined mr-3 text-primary text-base">luggage</span> Spacious Luggage Capacity</li>
+                  <li className="flex items-center">
+                    {/* seat icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-3 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M7 4a1 1 0 011-1h8a1 1 0 011 1v8H7V4zm-2 9h12l1.5 6H3.5L5 13zM8 2a3 3 0 000 6h8a3 3 0 000-6H8z"/>
+                    </svg>
+                    Premium Seating
+                  </li>
+                  <li className="flex items-center">
+                    {/* snowflake / AC icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-3 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/>
+                      <polyline points="6 6 12 2 18 6"/><polyline points="6 18 12 22 18 18"/>
+                      <polyline points="2 8 6 12 2 16"/><polyline points="22 8 18 12 22 16"/>
+                    </svg>
+                    Advanced Climate Control
+                  </li>
+                  <li className="flex items-center">
+                    {/* luggage icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-3 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="6" y="7" width="12" height="14" rx="1"/><path d="M9 7V5a2 2 0 014 0v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+                    </svg>
+                    Spacious Luggage Capacity
+                  </li>
                 </ul>
 
-                <Link 
-                  href="#booking" 
-                  onClick={() => setSelectedMobileVehicle(null)} 
+                <Link
+                  href="#booking"
+                  onClick={() => setSelectedMobileVehicle(null)}
                   className="block text-center bg-on-surface text-surface-container-lowest px-6 py-4 font-label-caps hover:bg-primary active:scale-[0.98] transition-all rounded-xl shadow-lg"
                 >
                   Reserve this Vehicle

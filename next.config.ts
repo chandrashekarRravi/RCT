@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    formats: ["image/avif", "image/webp"],
+    qualities: [60, 75, 85],
+    minimumCacheTTL: 2592000, // 30 days
     remotePatterns: [
       {
         protocol: "https",
@@ -14,7 +17,7 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "source.unsplash.com",
-      }
+      },
     ],
   },
 };

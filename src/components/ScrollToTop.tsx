@@ -37,7 +37,11 @@ export function ScrollToTop() {
           className="fixed bottom-6 right-6 z-50 p-3 bg-primary text-on-primary rounded-full shadow-lg hover:bg-primary/90 transition-colors flex items-center justify-center"
           aria-label="Scroll to top"
         >
-          <span className="material-symbols-outlined">arrow_upward</span>
+          {/* arrow up icon */}
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 19V5" />
+            <path d="M5 12l7-7 7 7" />
+          </svg>
         </motion.button>
       )}
     </AnimatePresence>
