@@ -62,14 +62,17 @@ export function Hero() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5, ease: ease }}
             >
-              <motion.h1
+              {/* Decorative splash text — aria-hidden, real H1 is in the hero below */}
+              <motion.span
+                aria-hidden="true"
+                role="presentation"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5, ease: ease }}
-                className="text-white text-5xl md:text-7xl lg:text-8xl font-display-lg tracking-tight text-center leading-[1.1]"
+                className="text-white text-5xl md:text-7xl lg:text-8xl font-display-lg tracking-tight text-center leading-[1.1] block"
               >
                 Beyond&nbsp;Regular&nbsp;Travel
-              </motion.h1>
+              </motion.span>
             </motion.div>
           </motion.div>
         )}

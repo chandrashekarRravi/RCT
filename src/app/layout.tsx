@@ -15,22 +15,36 @@ const libreCaslon = Libre_Caslon_Text({
   style: ["normal", "italic"],
 });
 
+const SITE_URL = "https://www.redcoastaltravels.com";
+
 export const metadata: Metadata = {
-  title: "Red Coastal Taxi Mangalore - The Luxury of Motion",
-  description: "Premium Road Journeys Across Coastal Karnataka & The Western Ghats.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Red Coastal Travels Mangalore — Premium Road Journeys",
+    template: "%s | Red Coastal Travels Mangalore",
+  },
+  description: "Premium Road Journeys Across Coastal Karnataka & The Western Ghats. Airport transfers, outstation trips, and pilgrimage routes from Mangaluru.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
-    icon: [
-      { url: "/logo.png" },
-    ],
-    apple: [
-      { url: "/logo.png" },
-    ],
+    icon: [{ url: "/logo.png" }],
+    apple: [{ url: "/logo.png" }],
   },
   openGraph: {
-    title: "Red Coastal Taxi Mangalore - The Luxury of Motion",
-    description: "Premium Road Journeys Across Coastal Karnataka & The Western Ghats.",
-    images: [{ url: "/logo.png", width: 800, height: 600 }],
+    title: "Red Coastal Travels Mangalore — Premium Road Journeys",
+    description: "Premium Road Journeys Across Coastal Karnataka & The Western Ghats. Airport transfers, outstation trips, and pilgrimage routes from Mangaluru.",
+    url: SITE_URL,
+    siteName: "Red Coastal Travels",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Red Coastal Travels Mangalore" }],
     type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Red Coastal Travels Mangalore — Premium Road Journeys",
+    description: "Premium Road Journeys Across Coastal Karnataka & The Western Ghats.",
+    images: ["/og-image.jpg"],
   },
 };
 

@@ -4,12 +4,15 @@ import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { destinations, slugToDestination } from "@/lib/destinations";
+import { DestinationBreadcrumbSchema, TouristAttractionSchema } from "@/components/JsonLd";
 import type { Metadata } from "next";
 
 // Pre-generate all destination slugs at build time
 export function generateStaticParams() {
   return destinations.map((d) => ({ slug: d.slug }));
 }
+
+const SITE_URL = "https://www.redcoastaltravels.com";
 
 // Per-page SEO metadata
 export async function generateMetadata({
@@ -20,9 +23,32 @@ export async function generateMetadata({
   const { slug } = await params;
   const dest = slugToDestination(slug);
   if (!dest) return {};
+
+  const pageTitle = `${dest.title} Travel Guide`;
+  const pageDesc = dest.longDesc.slice(0, 155) + "…";
+  const pageUrl = `${SITE_URL}/destinations/${dest.slug}`;
+  // img is a path like "/Destinations/Foo.jpg" — URL-encode for OG
+  const ogImage = `${SITE_URL}${dest.img}`;
+
   return {
-    title: `${dest.title} — Red Coastal Taxi Mangalore`,
-    description: dest.longDesc.slice(0, 160),
+    title: pageTitle,
+    description: pageDesc,
+    alternates: { canonical: `/destinations/${dest.slug}` },
+    openGraph: {
+      title: `${dest.title} | Red Coastal Taxi Mangalore`,
+      description: pageDesc,
+      url: pageUrl,
+      siteName: "Red Coastal Taxi Mangalore",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: dest.title }],
+      type: "article",
+      locale: "en_IN",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${dest.title} | Red Coastal Taxi Mangalore`,
+      description: pageDesc,
+      images: [ogImage],
+    },
   };
 }
 
@@ -38,6 +64,15 @@ export default async function DestinationDetailPage({
 
   return (
     <main className="relative bg-background text-on-background">
+      {/* JSON-LD structured data */}
+      <DestinationBreadcrumbSchema title={dest.title} slug={dest.slug} />
+      <TouristAttractionSchema
+        title={dest.title}
+        slug={dest.slug}
+        description={dest.longDesc}
+        image={dest.img}
+      />
+
       <Navigation />
 
       {/* ── BREADCRUMB ── */}

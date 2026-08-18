@@ -8,10 +8,15 @@ import { About } from "@/components/About";
 import { Reviews } from "@/components/Reviews";
 import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
+import { LocalBusinessSchema, FaqSchema } from "@/components/JsonLd";
 
 export default function Home() {
   return (
     <main className="relative bg-background text-on-background">
+      {/* JSON-LD structured data */}
+      <LocalBusinessSchema />
+      <FaqSchema />
+
       <Navigation />
       <Hero />
       <Destinations limit={3} />
@@ -19,7 +24,6 @@ export default function Home() {
       <AirportTransfers />
       <Reviews />
       <About />
-
       <Faq />
       <BookingForm />
       <Footer />
