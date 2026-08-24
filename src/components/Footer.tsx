@@ -19,7 +19,7 @@ export function Footer() {
           <div className="mb-6">
             <Image
               src="/logo.jpeg"
-              alt="Red Coastal Taxi Mangalore Logo"
+              alt="Red Coastal Travels Mangalore Logo"
               width={200}
               height={80}
               className="object-contain h-16 w-auto mix-blend-multiply"
@@ -130,7 +130,7 @@ export function Footer() {
           className="md:col-span-12 mt-16 pt-8 border-t border-on-surface/10 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="font-label-caps text-[10px] text-secondary uppercase tracking-widest mb-4 md:mb-0">
-            © 2026 Red Coastal Taxi Mangalore. Professional Chauffeur Services.
+            © 2026 Red Coastal Travels Mangalore. Professional Chauffeur Services.
           </p>
           <p className="font-label-caps text-[10px] text-secondary uppercase tracking-widest">
             Mangaluru | Udupi | Manipal | Kasaragod

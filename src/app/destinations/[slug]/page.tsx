@@ -12,6 +12,9 @@ export function generateStaticParams() {
   return destinations.map((d) => ({ slug: d.slug }));
 }
 
+export const revalidate = 3600; // 1 hour ISR to fix stale metadata
+
+
 const SITE_URL = "https://www.redcoastaltravels.com";
 
 // Per-page SEO metadata
@@ -35,17 +38,17 @@ export async function generateMetadata({
     description: pageDesc,
     alternates: { canonical: `/destinations/${dest.slug}` },
     openGraph: {
-      title: `${dest.title} | Red Coastal Taxi Mangalore`,
+      title: `${dest.title} | Red Coastal Travels Mangalore`,
       description: pageDesc,
       url: pageUrl,
-      siteName: "Red Coastal Taxi Mangalore",
+      siteName: "Red Coastal Travels Mangalore",
       images: [{ url: ogImage, width: 1200, height: 630, alt: dest.title }],
       type: "article",
       locale: "en_IN",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${dest.title} | Red Coastal Taxi Mangalore`,
+      title: `${dest.title} | Red Coastal Travels Mangalore`,
       description: pageDesc,
       images: [ogImage],
     },

@@ -62,7 +62,7 @@ export function Navigation() {
         <Link href="/" className="flex items-center">
           <Image
             src="/logo.jpeg"
-            alt="Red Coastal Taxi Mangalore Logo"
+            alt="Red Coastal Travels Mangalore Logo"
             width={160}
             height={60}
             className="object-contain h-12 w-auto mix-blend-multiply"

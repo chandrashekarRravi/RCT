@@ -15,7 +15,7 @@ export function About() {
           <h4 className="font-label-caps text-primary tracking-widest uppercase mb-4">The Red Coastal Legacy</h4>
           <h2 className="font-headline-lg text-on-surface mb-6"><span className="text-5xl md:text-8xl text-on-surface">About Us:</span> <span className="text-5xl md:text-8xl text-primary">Your Gateway</span><span className="font-bold text-4xl md:text-7xl"> to the Coast</span></h2>
           <p className="font-body-lg text-secondary mb-6">
-            Welcome to <strong className="text-on-surface font-semibold">RED COASTAL TAXI MANGALORE</strong>, Mangalore&apos;s premier travel partner. Based in the heart of the "Gateway to Karnataka," we specialize in providing reliable, comfortable, and affordable car rental services for travelers exploring the stunning coastal belt and the Western Ghats.
+            Welcome to <strong className="text-on-surface font-semibold">RED COASTAL TRAVELS MANGALORE</strong>, Mangalore&apos;s premier travel partner. Based in the heart of the "Gateway to Karnataka," we specialize in providing reliable, comfortable, and affordable car rental services for travelers exploring the stunning coastal belt and the Western Ghats.
           </p>
         </motion.div>
 

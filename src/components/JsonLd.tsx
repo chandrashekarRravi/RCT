@@ -7,8 +7,7 @@ export function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": ["TaxiService", "LocalBusiness"],
     "@id": "https://www.redcoastaltravels.com/#business",
-    name: "Red Coastal Travels",
-    alternateName: ["Red Coastal Taxi Mangalore", "Red Coastal Travels Mangalore"],
+    name: "Red Coastal Travels Mangalore",
     url: "https://www.redcoastaltravels.com",
     logo: "https://www.redcoastaltravels.com/logo.png",
     image: "https://www.redcoastaltravels.com/og-image.jpg",
@@ -50,7 +49,7 @@ export function LocalBusinessSchema() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "5",
+      reviewCount: "54",
       bestRating: "5",
       worstRating: "1",
     },
