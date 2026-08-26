@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { destinations, slugToDestination } from "@/lib/destinations";
+import { destinations, slugToDestination, getRelatedDestinations } from "@/lib/destinations";
 import { DestinationBreadcrumbSchema, TouristAttractionSchema } from "@/components/JsonLd";
 import type { Metadata } from "next";
 
@@ -62,6 +62,7 @@ export default async function DestinationDetailPage({
 }) {
   const { slug } = await params;
   const dest = slugToDestination(slug);
+  const related = getRelatedDestinations(slug);
 
   if (!dest) notFound();
 
@@ -74,6 +75,7 @@ export default async function DestinationDetailPage({
         slug={dest.slug}
         description={dest.longDesc}
         image={dest.img}
+        location={dest.location}
       />
 
       <Navigation />
@@ -150,6 +152,15 @@ export default async function DestinationDetailPage({
                 </li>
               ))}
             </ul>
+
+            {/* Travel Guide Content */}
+            <div className="mt-8 space-y-6">
+              {dest.guideContent.split('\n\n').map((paragraph, i) => (
+                <p key={i} className="font-body-lg text-body-lg text-secondary leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
 
           {/* Right — info card */}
@@ -216,6 +227,48 @@ export default async function DestinationDetailPage({
           </Link>
         </div>
       </div>
+
+      {/* ── RELATED DESTINATIONS ── */}
+      {related.length > 0 && (
+        <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-16 md:pb-24">
+          <h2 className="font-headline-lg text-headline-xl text-on-surface mb-8 border-b border-on-surface/10 pb-4">
+            You Might Also Like
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            {related.map((d) => (
+              <div key={d.slug} className="group flex flex-col h-full">
+                <Link href={`/destinations/${d.slug}`} className="block overflow-hidden mb-4 relative h-64 bg-surface-alt">
+                  {d.badge && (
+                    <div className="absolute top-4 left-4 z-10 bg-on-surface text-surface-container-lowest px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
+                      {d.badge}
+                    </div>
+                  )}
+                  <Image
+                    src={d.img}
+                    alt={d.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/40 transition-colors duration-300 flex items-center justify-center">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-surface-container-lowest text-on-surface px-4 py-2 font-label-caps text-[10px] flex items-center gap-2">
+                      See Details
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
+                <h3 className="font-headline-sm text-on-surface mb-1">
+                  <Link href={`/destinations/${d.slug}`} className="hover:text-primary transition-colors duration-300">
+                    {d.title}
+                  </Link>
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <Footer />
     </main>

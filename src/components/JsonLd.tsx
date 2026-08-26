@@ -166,11 +166,13 @@ export function TouristAttractionSchema({
   slug,
   description,
   image,
+  location,
 }: {
   title: string;
   slug: string;
   description: string;
   image: string;
+  location: string;
 }) {
   const base = "https://www.redcoastaltravels.com";
   const schema = {
@@ -182,6 +184,7 @@ export function TouristAttractionSchema({
     image: `${base}${image}`,
     touristType: "Cultural, Religious, Nature",
     isAccessibleForFree: true,
+    address: location,
   };
 
   return (

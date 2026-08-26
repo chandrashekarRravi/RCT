@@ -51,9 +51,10 @@ export function Hero() {
             <video
               src="/landing.mp4"
               autoPlay
-              loop
               muted
               playsInline
+              preload="none"
+              aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover"
             />
             {/* Dark overlay + title */}
@@ -186,6 +187,9 @@ export function Hero() {
                   loop
                   muted
                   playsInline
+                  preload="metadata"
+                  poster="/og-image.jpg"
+                  aria-hidden="true"
                   className="object-cover w-full h-full grayscale-[10%] hover:grayscale-0 transition-all duration-700"
                 />
               </motion.div>
