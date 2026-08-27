@@ -40,7 +40,8 @@ export function Navigation() {
   const navLinks = [
     { name: "Destinations", href: isHomePage ? "#destinations" : "/#destinations" },
     { name: "Fleet", href: isHomePage ? "#fleet" : "/#fleet" },
-    { name: "Airport", href: isHomePage ? "#airport" : "/#airport" },
+    { name: "Airport", href: "/airport-taxi" },
+    { name: "Blog", href: "/blog" },
     { name: "About", href: isHomePage ? "#about" : "/#about" },
     { name: "Reviews", href: isHomePage ? "#reviews" : "/#reviews" },
     { name: "FAQ", href: isHomePage ? "#faq" : "/#faq" },
@@ -52,11 +53,10 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        isScrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-on-surface/10 shadow-sm"
-          : "bg-background/50 backdrop-blur-sm border-b border-on-surface/5"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled
+        ? "bg-background/90 backdrop-blur-md border-b border-on-surface/10 shadow-sm"
+        : "bg-background/50 backdrop-blur-sm border-b border-on-surface/5"
+        }`}
     >
       <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
         <Link href="/" className="flex items-center">

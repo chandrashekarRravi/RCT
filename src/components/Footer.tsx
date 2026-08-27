@@ -135,7 +135,7 @@ export function Footer() {
           <p className="font-label-caps text-[10px] text-secondary uppercase tracking-widest">
             Mangaluru | Udupi | Manipal | Kasaragod
           </p>
-          <p className="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Developed By <a href="https://chandrashekar.vercel.app/" className="hover:text-primary transition-colors">Chandrashekar R</a></p>
+          <p className="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Developed By <a href="https://chandrashekar.vercel.app/csr-forge" className="hover:text-primary transition-colors">CSR-Forge</a></p>
         </motion.div>
       </div>
     </footer>

@@ -194,3 +194,66 @@ export function TouristAttractionSchema({
     />
   );
 }
+
+/**
+ * BreadcrumbList JSON-LD for Airport Taxi page.
+ */
+export function AirportBreadcrumbSchema() {
+  const base = "https://www.redcoastaltravels.com";
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: base,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Airport Taxi Service",
+        item: `${base}/airport-taxi`,
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+/**
+ * TaxiService JSON-LD for Airport Taxi page.
+ */
+export function AirportTaxiSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    name: "Mangaluru Airport Taxi Service by Red Coastal Travels",
+    url: "https://www.redcoastaltravels.com/airport-taxi",
+    description: "24/7 Premium Airport Taxi Transfers from Mangaluru International Airport (IXE) with real-time flight tracking.",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Red Coastal Travels Mangalore",
+      telephone: "+91-99720-02436",
+    },
+    areaServed: [
+      { "@type": "City", name: "Mangaluru" },
+      { "@type": "City", name: "Udupi" },
+      { "@type": "City", name: "Kasaragod" },
+      { "@type": "City", name: "Manipal" },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
