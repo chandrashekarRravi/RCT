@@ -13,7 +13,7 @@ export const blogPosts: BlogPost[] = [
     title: "Best Time to Visit Kateel Temple from Mangalore",
     description: "Planning a visit to Kateel Durgaparameshwari Temple? Discover the best time to go, temple timings, and why booking a private taxi from Mangalore is the ideal way to travel.",
     image: "/blog/kateel_temple.jpg",
-    date: "2024-03-25",
+    date: "2026-08-20",
     content: `
 <p class="mb-4">Located on an islet in the middle of the sacred Nandini River, the Kateel Durgaparameshwari Temple is one of the holiest sites in Coastal Karnataka. Just 26 kilometers from Mangalore, this temple draws thousands of devotees seeking the blessings of Goddess Durgaparameshwari. If you are planning a pilgrimage, knowing the right time to visit and the best way to travel can make your spiritual journey much smoother.</p>
 
@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
 <p class="mb-4">While local buses operate between Mangalore and Kateel, they can be crowded and time-consuming, making frequent stops. There is no direct train connectivity to Kateel either.</p> 
 <p class="mb-4">For a peaceful and stress-free pilgrimage, booking a private taxi with <strong>Red Coastal Travels</strong> is highly recommended:</p>
 <ul class="list-disc pl-6 space-y-2 mb-6">
-  <li><strong>Convenience & Comfort:</strong> A private cab picks you up directly from your home, hotel, or the Mangalore airport (IXE), ensuring a comfortable ride in an air-conditioned vehicle.</li>
+  <li><strong>Convenience & Comfort:</strong> A private cab will pick you up directly from your home, hotel, or the Mangalore airport (IXE), ensuring a comfortable ride in an air-conditioned vehicle.</li>
   <li><strong>Flexibility:</strong> You can time your visit perfectly around the specific Pooja timings without worrying about public transport schedules.</li>
   <li><strong>Wait Time Included:</strong> Your driver will wait for you while you complete your darshan (which can sometimes take a few hours on busy days) and safely drop you back.</li>
   <li><strong>Custom Itineraries:</strong> If you wish to visit nearby temples like Bappanadu or Polali on the same day, a private taxi makes multi-stop itineraries effortless.</li>
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     title: "How Much Does an Outstation Taxi from Mangalore Cost?",
     description: "Wondering about the cost of booking an outstation taxi from Mangalore? Learn about the factors that affect your fare, from vehicle type to distance.",
     image: "/blog/outstation_taxi.jpg",
-    date: "2024-03-20",
+    date: "2026-08-27",
     content: `
 <p class="mb-4">Whether you are planning a weekend getaway to Coorg, a pilgrimage to Dharmasthala, or a business trip to Udupi, booking an outstation taxi from Mangalore is the most comfortable and reliable way to travel. But one of the first questions most travelers ask is: <em>"How much will it cost?"</em></p>
 

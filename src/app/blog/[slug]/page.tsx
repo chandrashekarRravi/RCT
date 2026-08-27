@@ -128,6 +128,7 @@ export default async function BlogPostPage({
             alt={post.title}
             fill
             priority
+            sizes="100vw"
             className="object-cover"
           />
         </div>
