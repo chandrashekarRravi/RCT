@@ -21,10 +21,10 @@ const SITE_URL = "https://www.redcoastaltravels.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Red Coastal Travels Mangalore — Premium Road Journeys",
+    default: "Mangalore Taxi & Premium Cab Service | Red Coastal Travels",
     template: "%s | Red Coastal Travels Mangalore",
   },
-  description: "Premium Road Journeys Across Coastal Karnataka & The Western Ghats. Airport transfers, outstation trips, and pilgrimage routes from Mangaluru.",
+  description: "Reliable Mangalore taxi service for airport transfers, outstation cabs, and premium road journeys across Coastal Karnataka & The Western Ghats.",
   alternates: {
     canonical: "/",
   },

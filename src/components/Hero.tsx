@@ -99,14 +99,14 @@ export function Hero() {
             }}
             className="md:col-span-5 flex flex-col justify-center pr-0 md:pr-12 z-10 relative"
           >
-            <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[95px] leading-tight text-on-surface mb-6 relative tracking-wider">
-              Beyond <br />{" "}
-              <span className="text-6xl md:text-8xl text-primary font-light">Regular</span>
+            <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[80px] leading-tight text-on-surface mb-6 relative tracking-tight">
+              Mangalore's Premium <br />{" "}
+              <span className="text-5xl md:text-7xl text-primary font-light">Taxi & Cab</span>
               <br />
-              Travel
+              Service
             </h1>
             <p className="font-body-lg text-body-lg text-secondary mb-10 max-w-md">
-              Premium Road Journeys Across Coastal Karnataka &amp; The Western Ghats.
+              Reliable outstation cabs, airport transfers, and premium road journeys across Coastal Karnataka &amp; The Western Ghats.
             </p>
             <div>
               <Link

@@ -27,28 +27,28 @@ export async function generateMetadata({
   const dest = slugToDestination(slug);
   if (!dest) return {};
 
-  const pageTitle = `${dest.title} Travel Guide`;
+  const pageTitle = `${dest.seoKeyword} | ${dest.title} Travel Guide`;
   const pageDesc = dest.longDesc.slice(0, 155) + "…";
   const pageUrl = `${SITE_URL}/destinations/${dest.slug}`;
   // img is a path like "/Destinations/Foo.jpg" — URL-encode for OG
   const ogImage = `${SITE_URL}${dest.img}`;
 
   return {
-    title: pageTitle,
+    title: pageTitle, // root template will append "| Red Coastal Travels Mangalore"
     description: pageDesc,
     alternates: { canonical: `/destinations/${dest.slug}` },
     openGraph: {
-      title: `${dest.title} | Red Coastal Travels Mangalore`,
+      title: `${pageTitle} | Red Coastal Travels Mangalore`, // OG needs full title
       description: pageDesc,
       url: pageUrl,
       siteName: "Red Coastal Travels Mangalore",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: dest.title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: dest.seoKeyword }],
       type: "article",
       locale: "en_IN",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${dest.title} | Red Coastal Travels Mangalore`,
+      title: `${pageTitle} | Red Coastal Travels Mangalore`,
       description: pageDesc,
       images: [ogImage],
     },
@@ -71,7 +71,7 @@ export default async function DestinationDetailPage({
       {/* JSON-LD structured data */}
       <DestinationBreadcrumbSchema title={dest.title} slug={dest.slug} />
       <TouristAttractionSchema
-        title={dest.title}
+        title={dest.seoKeyword}
         slug={dest.slug}
         description={dest.longDesc}
         image={dest.img}
@@ -111,7 +111,7 @@ export default async function DestinationDetailPage({
       <div className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
         <Image
           src={dest.img}
-          alt={dest.title}
+          alt={dest.seoKeyword}
           fill
           priority
           sizes="100vw"
@@ -131,8 +131,8 @@ export default async function DestinationDetailPage({
 
           {/* Left — main content */}
           <div className="lg:col-span-8">
-            <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[72px] leading-tight text-on-surface mb-6 tracking-tight">
-              {dest.title}
+            <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[60px] leading-tight text-on-surface mb-6 tracking-tight">
+              {dest.seoKeyword}
             </h1>
             <p className="font-body-lg text-body-lg text-secondary mb-10 max-w-2xl leading-relaxed">
               {dest.longDesc}
@@ -160,6 +160,28 @@ export default async function DestinationDetailPage({
                   {paragraph}
                 </p>
               ))}
+            </div>
+
+            {/* Distance & Travel Time SEO Section */}
+            <h2 className="font-headline-md text-headline-md text-on-surface mt-12 mb-6 border-b border-on-surface/10 pb-4">
+              Mangalore to {dest.title} Distance & Travel Time
+            </h2>
+            <div className="space-y-6">
+              <p className="font-body-lg text-body-lg text-secondary leading-relaxed">
+                The driving distance from Mangalore to {dest.title} is approximately <strong>{dest.distance}</strong>. 
+                Depending on traffic and road conditions, the journey typically takes a comfortable drive when you book a private outstation cab with us.
+                Our experienced drivers know the best routes to ensure a safe, scenic, and relaxing trip.
+              </p>
+              <div className="pt-4">
+                <a
+                  href="https://wa.me/919972002436"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-primary text-on-primary px-8 py-4 font-label-caps text-label-caps hover:bg-primary/90 transition-colors duration-300"
+                >
+                  Book Your Taxi to {dest.title}
+                </a>
+              </div>
             </div>
           </div>
 

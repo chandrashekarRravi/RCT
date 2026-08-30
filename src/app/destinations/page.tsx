@@ -5,13 +5,13 @@ import { Destinations } from "@/components/Destinations";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Explore Karnataka Destinations",
-  description: "Discover Red Coastal Travels' handpicked routes across Karnataka — from Dharmasthala and Murudeshwara on the coast to Hampi, Coorg, Chikmagalur, and Mysore Palace in the heartland. Premium road journeys from Mangaluru.",
+  title: "Explore Karnataka Taxi Routes & Destinations",
+  description: "Discover Red Coastal Travels' handpicked taxi routes across Karnataka — from Dharmasthala and Murudeshwara on the coast to Hampi, Coorg, Chikmagalur, and Mysore Palace in the heartland. Premium road journeys from Mangaluru.",
   alternates: {
     canonical: "/destinations",
   },
   openGraph: {
-    title: "Explore Karnataka Destinations | Red Coastal Travels Mangalore",
+    title: "Explore Karnataka Taxi Routes & Destinations | Red Coastal Travels Mangalore",
     description: "Handpicked road-trip routes across coastal Karnataka and beyond — pilgrimage circuits, heritage trails, and hill-station drives from Mangaluru.",
     url: "https://www.redcoastaltravels.com/destinations",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Karnataka Destinations" }],

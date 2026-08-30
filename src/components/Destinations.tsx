@@ -23,10 +23,10 @@ export function Destinations({ limit, hideViewAll }: { limit?: number; hideViewA
       >
         <div>
           <h2 className="font-headline-lg text-headline-2xl md:text-headline-lg text-on-surface">
-            <span className="text-5xl md:text-7xl">Explore Karnataka</span>
-            <br />&<span className="text-primary text-5xl md:text-7xl ml-2">Beyond</span>
+            <span className="text-5xl md:text-7xl">Premium Taxi</span>
+            <br />&<span className="text-primary text-5xl md:text-7xl ml-2">Cab Routes</span>
           </h2>
-          <p className="font-body-md text-secondary mt-4 max-w-lg">Handpicked routes for the ultimate road trip experience.</p>
+          <p className="font-body-md text-secondary mt-4 max-w-lg">Handpicked outstation destinations across Karnataka for the ultimate road trip experience.</p>
         </div>
         {!hideViewAll && (
           <Link href="/destinations" className="hidden md:flex items-center font-label-caps text-label-caps text-secondary hover:text-primary transition-colors">

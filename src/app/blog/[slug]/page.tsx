@@ -29,11 +29,11 @@ export async function generateMetadata({
   const ogImage = `${SITE_URL}${post.image}`;
 
   return {
-    title: `${post.title} | Red Coastal Travels Blog`,
+    title: post.title, // template will append " | Red Coastal Travels Mangalore"
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: `${post.title} | Red Coastal Travels Blog`,
+      title: `${post.title} | Red Coastal Travels Mangalore`, // OG bypasses template
       description: post.description,
       url: pageUrl,
       siteName: "Red Coastal Travels Mangalore",
