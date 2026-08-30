@@ -76,7 +76,54 @@ export const blogPosts: BlogPost[] = [
 
 <p class="mb-4"><a href="https://wa.me/919972002436" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Click here to chat with us on WhatsApp</a> and get your exact outstation taxi fare today!</p>
     `,
-  }
+  },
+  {
+    slug: "mangalore-to-coorg-by-road-complete-travel-guide",
+    title: "Mangalore to Coorg by Road: Complete Travel Guide",
+    description: "Planning a road trip from Mangalore to Coorg? Discover the best route, travel time, stops along the way, and why a private taxi makes the journey unforgettable.",
+    image: "/blog/coorg_road_trip.jpg",
+    date: "2026-08-30",
+    content: `
+<p class="mb-4">The drive from Mangalore to Coorg is one of South India's most rewarding road journeys. Winding through the lush Western Ghats, crossing misty coffee estates, and arriving in the cool highland air of Kodagu — it's the kind of trip that stays with you long after you return. If you are planning this getaway, this guide covers everything you need to know.</p>
+
+<h3 class="text-2xl font-headline-sm text-on-surface mt-8 mb-4">Distance and Route Overview</h3>
+<p class="mb-4">The most popular route from Mangaluru to Madikeri (Coorg's main town) covers approximately <strong>135 to 155 km</strong>, depending on which road you take. The two main options are:</p>
+<ul class="list-disc pl-6 space-y-2 mb-6">
+  <li><strong>Via Uppinangady and Sampaje Ghat:</strong> The scenic route — roughly 150 km, passing through dense forests and the dramatic Sampaje Ghat. Best for those who want to enjoy the journey as much as the destination.</li>
+  <li><strong>Via Hassan (NH275):</strong> A longer but flatter alternative at around 220 km. Recommended for large vehicles or those avoiding steep Ghat roads.</li>
+</ul>
+<p class="mb-4">By private taxi, the drive via Sampaje takes approximately <strong>3.5 to 4.5 hours</strong> depending on traffic and stops. The Ghat section demands careful, unhurried driving — our professional chauffeurs know these roads intimately and handle them with complete confidence.</p>
+
+<h3 class="text-2xl font-headline-sm text-on-surface mt-8 mb-4">Stops Worth Making Along the Way</h3>
+<p class="mb-4">One of the great advantages of booking a private cab from Mangalore to Coorg is the freedom to stop wherever you like, at your own pace. Here are a few highlights worth adding to your itinerary:</p>
+<ul class="list-disc pl-6 space-y-2 mb-6">
+  <li><strong>Kukke Subramanya Temple:</strong> A major pilgrimage site nestled deep in the Western Ghats, roughly midway on the Sampaje route. An ideal spiritual stopover.</li>
+  <li><strong>Sampaje View Point:</strong> Offers breathtaking panoramic views of the valley below just as you begin the Ghat ascent. Perfect for a quick photography break.</li>
+  <li><strong>Kushalnagar and Nisargadhama:</strong> An island forest reserve on the Cauvery River, just 25 km before Madikeri. Great for a refreshing stroll among bamboo and rosewood trees.</li>
+</ul>
+
+<h3 class="text-2xl font-headline-sm text-on-surface mt-8 mb-4">Best Time to Make the Trip</h3>
+<p class="mb-4">Coorg is a year-round destination, but the experience varies dramatically by season:</p>
+<ul class="list-disc pl-6 space-y-2 mb-6">
+  <li><strong>October to March:</strong> Cool, clear weather with lush green landscapes after the monsoon. Ideal for outdoor activities, plantation walks, and trekking.</li>
+  <li><strong>April to May:</strong> Warm but manageable. The coffee blossoms are in full bloom, filling the air with an intoxicating fragrance — truly magical.</li>
+  <li><strong>June to September (Monsoon):</strong> The Ghats transform into a dramatic waterfall wonderland, but heavy rains can make roads slippery. Travel with an experienced driver if visiting during this period.</li>
+</ul>
+
+<h3 class="text-2xl font-headline-sm text-on-surface mt-8 mb-4">Choosing the Right Vehicle</h3>
+<p class="mb-4">The Sampaje Ghat has sharp hairpin bends and steep gradients. The vehicle you choose genuinely matters:</p>
+<ul class="list-disc pl-6 space-y-2 mb-6">
+  <li><strong>Toyota Innova Crysta:</strong> Our most recommended option for families. Superior suspension, powerful engine, and ample space for luggage — handles the Ghat roads with ease.</li>
+  <li><strong>Maruti Suzuki Ertiga:</strong> A great choice for small groups of 5 to 6 seeking comfort at a more economical price point.</li>
+  <li><strong>Force Traveller / Urbania:</strong> For larger groups of 10 or more. Experienced Ghat drivers are always assigned for this route.</li>
+</ul>
+
+<h3 class="text-2xl font-headline-sm text-on-surface mt-8 mb-4">Why Book a Private Taxi Instead of Self-Drive?</h3>
+<p class="mb-4">The Sampaje Ghat is not a road for nervous or unfamiliar drivers. Our chauffeurs have driven this route hundreds of times and know exactly where to slow down, where to stop for the best views, and how to navigate around the occasional landslide debris during monsoon. You can sit back, take in the scenery, and arrive at your plantation resort refreshed — rather than white-knuckled.</p>
+
+<p class="mb-4">Ready to plan your Coorg getaway? <a href="https://wa.me/919972002436" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Message us on WhatsApp</a> with your travel dates, group size, and preferred vehicle — we'll have a quote ready for you in minutes.</p>
+    `,
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

@@ -5,17 +5,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const SITE_URL = "https://www.redcoastaltravels.com";
-const pageTitle = "Mangalore Airport Taxi Service | 24/7 IXE Transfers - Red Coastal Travels";
+const pageTitle = "Mangalore Airport Taxi | 24/7 IXE Transfers";
 const pageDesc = "Book reliable 24/7 airport taxi transfers from Mangaluru International Airport (IXE). Real-time flight tracking, name-board pickup, covering Udupi, Manipal, and Kasaragod.";
 const pageUrl = `${SITE_URL}/airport-taxi`;
 const ogImage = `${SITE_URL}/Destinations/Mangalore.jpg`; // Fallback image
 
 export const metadata: Metadata = {
-  title: pageTitle,
+  title: pageTitle, // template appends "| Red Coastal Travels Mangalore"
   description: pageDesc,
   alternates: { canonical: "/airport-taxi" },
   openGraph: {
-    title: pageTitle,
+    title: `${pageTitle} | Red Coastal Travels Mangalore`, // OG must be self-contained
     description: pageDesc,
     url: pageUrl,
     siteName: "Red Coastal Travels Mangalore",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: pageTitle,
+    title: `${pageTitle} | Red Coastal Travels Mangalore`,
     description: pageDesc,
     images: [ogImage],
   },

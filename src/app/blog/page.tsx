@@ -8,11 +8,11 @@ import type { Metadata } from "next";
 const SITE_URL = "https://www.redcoastaltravels.com";
 
 export const metadata: Metadata = {
-  title: "Travel Guides & Tips | Red Coastal Travels Mangalore",
+  title: "Travel Guides & Blog",
   description: "Read our latest travel guides, tips, and articles about visiting Coastal Karnataka and booking the best taxi services from Mangalore.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Travel Guides & Tips | Red Coastal Travels Mangalore",
+    title: "Travel Guides & Blog | Red Coastal Travels Mangalore",
     description: "Read our latest travel guides, tips, and articles about visiting Coastal Karnataka and booking the best taxi services from Mangalore.",
     url: `${SITE_URL}/blog`,
     siteName: "Red Coastal Travels Mangalore",
