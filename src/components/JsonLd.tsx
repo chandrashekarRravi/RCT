@@ -182,9 +182,13 @@ export function TouristAttractionSchema({
     description,
     url: `${base}/destinations/${slug}`,
     image: `${base}${image}`,
-    touristType: "Cultural, Religious, Nature",
     isAccessibleForFree: true,
-    address: location,
+    // address must be a PostalAddress object, not a plain string
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: location,
+      addressCountry: "IN",
+    },
   };
 
   return (

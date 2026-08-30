@@ -114,8 +114,8 @@ export default function AirportTaxiPage() {
             <div className="bg-surface-container-low p-6 border border-on-surface/10 rounded">
               <h3 className="font-label-caps text-sm text-secondary uppercase tracking-widest mb-2">Transparent Pricing</h3>
               <p className="font-body-md text-on-surface mb-2">We offer competitive, all-inclusive pricing for all major routes from IXE.</p>
-              <p className="font-body-md text-primary font-bold">Fares starting from ₹[PRICE]</p>
-              <p className="text-xs text-secondary mt-2">Contact us for exact quotes to your specific destination.</p>
+              <p className="font-body-md text-primary font-bold">Contact us for a personalised quote</p>
+              <p className="text-xs text-secondary mt-2">Share your destination, date, and passenger count — we reply instantly on WhatsApp.</p>
             </div>
           </div>
 

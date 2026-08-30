@@ -149,8 +149,8 @@ export function Fleet() {
 
           <div className="md:col-span-5 lg:col-span-4 flex flex-col justify-center bg-background md:p-12 min-h-[auto] md:min-h-[600px] rounded-2xl md:rounded-none overflow-hidden">
 
-            {/* Desktop View */}
-            <div className="hidden md:block h-full">
+            {/* Desktop View — aria-hidden to prevent duplicate h3 headings in the crawler's DOM (Googlebot crawls mobile-first; the mobile list below is the canonical source) */}
+            <div className="hidden md:block h-full" aria-hidden="true">
               <AnimatePresence mode="wait">
                 {selectedVehicle === null ? (
                   <motion.div
