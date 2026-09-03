@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const SITE_URL = "https://www.redcoastaltravels.com";
 const pageTitle = "Mangalore Airport Taxi | 24/7 IXE Transfers";
-const pageDesc = "Book reliable 24/7 airport taxi transfers from Mangaluru International Airport (IXE). Real-time flight tracking, name-board pickup, covering Udupi, Manipal, and Kasaragod.";
+const pageDesc = "Book reliable 24/7 airport taxi transfers from Mangalore International Airport (IXE). Real-time flight tracking, name-board pickup, covering Udupi, Manipal, and Kasaragod.";
 const pageUrl = `${SITE_URL}/airport-taxi`;
 const ogImage = `${SITE_URL}/Destinations/Mangalore.jpg`; // Fallback image
 
@@ -64,7 +64,7 @@ export default function AirportTaxiPage() {
           <svg xmlns="http://www.w3.org/2000/svg" className="w-16 h-16 mb-6 mx-auto" viewBox="0 0 24 24" fill="currentColor">
             <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
           </svg>
-          <h1 className="font-headline-lg text-5xl md:text-7xl mb-6">Mangaluru Airport (IXE) Taxi Service</h1>
+          <h1 className="font-headline-lg text-5xl md:text-7xl mb-6">Mangalore Airport (IXE) Taxi Service</h1>
           <p className="font-body-lg text-on-primary/80 mb-10">
             Never miss a flight. 24/7 dedicated airport transfers with real-time flight tracking and premium vehicles.
           </p>
@@ -89,7 +89,7 @@ export default function AirportTaxiPage() {
           <div>
             <h2 className="font-headline-md text-3xl mb-6 text-on-surface">Premium Airport Transfers</h2>
             <p className="font-body-lg text-secondary mb-6 leading-relaxed">
-              Arriving at Mangaluru International Airport (IXE)? Avoid the hassle of negotiating with unverified cabs or waiting in long queues. Our premium airport taxi service ensures a smooth, relaxing transition from the terminal to your destination.
+              Arriving at Mangalore International Airport (IXE)? Avoid the hassle of negotiating with unverified cabs or waiting in long queues. Our premium airport taxi service ensures a smooth, relaxing transition from the terminal to your destination.
             </p>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">
@@ -126,7 +126,7 @@ export default function AirportTaxiPage() {
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-surface-alt p-4 rounded text-center">
-                <h4 className="font-bold text-on-surface">Mangaluru City</h4>
+                <h4 className="font-bold text-on-surface">Mangalore City</h4>
                 <p className="text-sm text-secondary">Hotels & Business</p>
               </div>
               <div className="bg-surface-alt p-4 rounded text-center">

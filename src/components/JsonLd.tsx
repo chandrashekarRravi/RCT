@@ -12,7 +12,7 @@ export function LocalBusinessSchema() {
     logo: "https://www.redcoastaltravels.com/logo.png",
     image: "https://www.redcoastaltravels.com/og-image.jpg",
     description:
-      "Premium road journeys across Coastal Karnataka and the Western Ghats. Airport transfers, outstation trips, and pilgrimage routes from Mangaluru.",
+      "Premium road journeys across Coastal Karnataka and the Western Ghats. Airport transfers, outstation trips, and pilgrimage routes from Mangalore.",
     telephone: ["+91-99720-02436", "+91-63630-35567"],
     address: {
       "@type": "PostalAddress",
@@ -28,7 +28,7 @@ export function LocalBusinessSchema() {
       longitude: 74.856,
     },
     areaServed: [
-      { "@type": "City", name: "Mangaluru" },
+      { "@type": "City", name: "Mangalore" },
       { "@type": "City", name: "Udupi" },
       { "@type": "City", name: "Kasaragod" },
     ],
@@ -238,16 +238,16 @@ export function AirportTaxiSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "TaxiService",
-    name: "Mangaluru Airport Taxi Service by Red Coastal Travels",
+    name: "Mangalore Airport Taxi Service by Red Coastal Travels",
     url: "https://www.redcoastaltravels.com/airport-taxi",
-    description: "24/7 Premium Airport Taxi Transfers from Mangaluru International Airport (IXE) with real-time flight tracking.",
+    description: "24/7 Premium Airport Taxi Transfers from Mangalore International Airport (IXE) with real-time flight tracking.",
     provider: {
       "@type": "LocalBusiness",
       name: "Red Coastal Travels Mangalore",
       telephone: "+91-99720-02436",
     },
     areaServed: [
-      { "@type": "City", name: "Mangaluru" },
+      { "@type": "City", name: "Mangalore" },
       { "@type": "City", name: "Udupi" },
       { "@type": "City", name: "Kasaragod" },
       { "@type": "City", name: "Manipal" },

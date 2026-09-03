@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Red Coastal Travels Mangalore — Premium Road Journeys",
-    description: "Premium Road Journeys Across Coastal Karnataka & The Western Ghats. Airport transfers, outstation trips, and pilgrimage routes from Mangaluru.",
+    description: "Premium Road Journeys Across Coastal Karnataka & The Western Ghats. Airport transfers, outstation trips, and pilgrimage routes from Mangalore.",
     url: SITE_URL,
     siteName: "Red Coastal Travels",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Red Coastal Travels Mangalore" }],

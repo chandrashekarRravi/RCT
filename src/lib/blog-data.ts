@@ -87,7 +87,7 @@ export const blogPosts: BlogPost[] = [
 <p class="mb-4">The drive from Mangalore to Coorg is one of South India's most rewarding road journeys. Winding through the lush Western Ghats, crossing misty coffee estates, and arriving in the cool highland air of Kodagu — it's the kind of trip that stays with you long after you return. If you are planning this getaway, this guide covers everything you need to know.</p>
 
 <h3 class="text-2xl font-headline-sm text-on-surface mt-8 mb-4">Distance and Route Overview</h3>
-<p class="mb-4">The most popular route from Mangaluru to Madikeri (Coorg's main town) covers approximately <strong>135 to 155 km</strong>, depending on which road you take. The two main options are:</p>
+<p class="mb-4">The most popular route from Mangalore to Madikeri (Coorg's main town) covers approximately <strong>135 to 155 km</strong>, depending on which road you take. The two main options are:</p>
 <ul class="list-disc pl-6 space-y-2 mb-6">
   <li><strong>Via Uppinangady and Sampaje Ghat:</strong> The scenic route — roughly 150 km, passing through dense forests and the dramatic Sampaje Ghat. Best for those who want to enjoy the journey as much as the destination.</li>
   <li><strong>Via Hassan (NH275):</strong> A longer but flatter alternative at around 220 km. Recommended for large vehicles or those avoiding steep Ghat roads.</li>

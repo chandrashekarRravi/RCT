@@ -26,7 +26,7 @@ export function Footer() {
             />
           </div>
           <p className="font-body-md text-secondary max-w-sm mb-8">
-            Serving Mangaluru, Udupi, and Kasaragod with unparalleled road travel experiences.
+            Serving Mangalore, Udupi, and Kasaragod with unparalleled road travel experiences.
           </p>
           <div className="flex items-start space-x-4 mb-4">
             {/* phone icon */}
@@ -133,7 +133,7 @@ export function Footer() {
             © 2026 Red Coastal Travels Mangalore. Professional Chauffeur Services.
           </p>
           <p className="font-label-caps text-[10px] text-secondary uppercase tracking-widest">
-            Mangaluru | Udupi | Manipal | Kasaragod
+            Mangalore | Udupi | Manipal | Kasaragod
           </p>
           <p className="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Developed By <a href="https://chandrashekar.vercel.app/csr-forge" className="hover:text-primary transition-colors">CSR-Forge</a></p>
         </motion.div>
