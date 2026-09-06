@@ -44,8 +44,19 @@ export function Footer() {
               <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.099 3.468-4.698 3.468-8.084a6.75 6.75 0 00-13.5 0c0 3.386 1.525 5.985 3.469 8.084a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.144.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
             </svg>
             <span className="font-body-md text-secondary max-w-[250px]">
-              Airport Road, Kunjathbail Basavanagara, Mangalore, Karnataka
+              D/No 3/426/10, Basavanagar, Kunjathabail, Mangalore, Karnataka 575015
             </span>
+          </div>
+          <div className="mt-6 w-full max-w-sm h-48 rounded-lg overflow-hidden border border-on-surface/10">
+            <iframe
+              src="https://maps.google.com/maps?q=Red%20Coastal%20Travels,%20Mangalore&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </motion.div>
 

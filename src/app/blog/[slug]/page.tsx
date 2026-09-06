@@ -70,7 +70,8 @@ export default async function BlogPostPage({
     dateModified: post.date,
     author: {
       "@type": "Organization",
-      name: "Red Coastal Travels Mangalore",
+      "@id": "https://www.redcoastaltravels.com/#business",
+      name: "Red Coastal Travels",
       url: SITE_URL,
     },
     description: post.description,

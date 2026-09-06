@@ -7,7 +7,7 @@ export function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": ["TaxiService", "LocalBusiness"],
     "@id": "https://www.redcoastaltravels.com/#business",
-    name: "Red Coastal Travels Mangalore",
+    name: "Red Coastal Travels",
     url: "https://www.redcoastaltravels.com",
     logo: "https://www.redcoastaltravels.com/logo.png",
     image: "https://www.redcoastaltravels.com/og-image.jpg",
@@ -16,10 +16,10 @@ export function LocalBusinessSchema() {
     telephone: ["+91-99720-02436", "+91-63630-35567"],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Airport Road, Kunjathbail Basavanagara",
+      streetAddress: "D/No 3/426/10, Basavanagar, Kunjathabail",
       addressLocality: "Mangalore",
       addressRegion: "Karnataka",
-      postalCode: "575006",
+      postalCode: "575015",
       addressCountry: "IN",
     },
     geo: {
@@ -243,7 +243,8 @@ export function AirportTaxiSchema() {
     description: "24/7 Premium Airport Taxi Transfers from Mangalore International Airport (IXE) with real-time flight tracking.",
     provider: {
       "@type": "LocalBusiness",
-      name: "Red Coastal Travels Mangalore",
+      "@id": "https://www.redcoastaltravels.com/#business",
+      name: "Red Coastal Travels",
       telephone: "+91-99720-02436",
     },
     areaServed: [
