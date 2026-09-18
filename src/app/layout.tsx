@@ -70,6 +70,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
+        
+        {/* Google tag (gtag.js) */}
+        <Script
+          id="google-tag"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18397370523"
+        />
+        <Script
+          id="google-tag-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18397370523');
+            `,
+          }}
+        />
       </head>
       <body
         className={`${inter.variable} ${libreCaslon.variable} antialiased font-body-md overflow-x-hidden bg-background text-on-background`}

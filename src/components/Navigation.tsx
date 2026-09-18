@@ -46,6 +46,7 @@ export function Navigation() {
     { name: "Reviews", href: isHomePage ? "#reviews" : "/#reviews" },
     { name: "FAQ", href: isHomePage ? "#faq" : "/#faq" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const bookingHref = isHomePage ? "#booking" : "/#booking";
